@@ -7,84 +7,201 @@ html,body{
     min-height: 100vh;
 }
 body {
-    background: hsl(0, 100%, 74%) url('images/bg-intro-desktop.png') no-repeat;
+    background: hsl(0, 100%, 74%) url('images/bg-intro-mobile.png') no-repeat;
+    background-size: cover;
     font-size: 16px;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
 }
-.body{
-    height: 95vh;
-    max-width: 900px  ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+
+@media (max-width:500px){
+    .body{
+        padding: 8vw;
+        text-align: center;
+    }
+    .left, .right {
+        width: 80vw;
+        max-width: 326px;
+    }
+    .right{
+        margin-top: 8vh;
+    }
+    h1 {
+        font-size: 2em;
+        line-height: 40px;
+        margin: 10vh 0px 5vh;
+    }
+    p{
+        line-height: 22px;
+    }
+    .try{
+        height: 5em;
+        text-align: center;
+        background-color: hsl(248, 32%, 49%);
+        border-radius: 10px;
+        box-shadow:1px 5px 3px hsla(248, 32%, 49%, 0.5)  ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .try:hover {
+        background-color: hsla(248, 31%, 50%, 0.863);
+    }
+    .form{
+        padding:2em 1.5em;
+        background-color: white;
+        border-radius: 10px;
+        color:black;
+        display: flex;
+        flex-direction: column;
+        box-shadow:1px 5px 3px rgba(0, 0, 0, 0.185);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        font-size: 1.1em;
+        height: 2.5em;
+        padding: 1em;
+        border: solid 2px rgba(0, 0, 0, 0.089);
+        border-radius: 9px;
+        margin-bottom: 15px;
+    }
+    input:focus {
+        outline: none;
+        border: solid 2px rgba(0, 0, 0, 0.267);
+    }
+    button {
+        font-size: 1.1em;
+        height:2.5em;
+        border: solid 2px hsl(154, 57%, 45%);
+        border-radius: 10px;
+        color: white;
+        background-color: hsl(154, 59%, 51%);
+        cursor: pointer;
+    }
+    .terms{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 0.59em;
+    }
+    .terms span em{
+        color: red;
+        cursor: pointer;
+    }
+    .attribution{
+        font-size: 0.8em;
+        margin: 3em 0px;
+    }
 }
-.left, .right {
-    width: 42vw;
-}
-.right{
-    margin-left: 3vw;
-}
-h1 {
-    font-size: 2.6em;
-    line-height: 40px;
-    margin-bottom: 25px;
-}
-p{
-    line-height: 24px;
-}
-.try{
-    height: 3em;
-    text-align: center;
-    background-color: hsl(248, 32%, 49%);
-    border-radius: 10px;
-    box-shadow:1px 5px 3px hsla(248, 32%, 49%, 0.5)  ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-.form{
-    padding:2em;
-    background-color: white;
-    border-radius: 10px;
-    color:black;
-    display: flex;
-    flex-direction: column;
-}
-form{
-    display: flex;
-    flex-direction: column;
-}
-input{
-    font-size: 1.2em;
-    height: 2.5em;
-    padding: 1em;
-    border: solid 2px rgba(0, 0, 0, 0.089);
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-button {
-    font-size: 1.2em;
-    height:2.5em;
-    border: solid 2px hsl(154, 57%, 45%);
-    border-radius: 10px;
-    color: white;
-    background-color: hsl(154, 59%, 51%);
-    cursor: pointer;
-}
-.terms{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    font-size: 0.59em;
-}
-.terms span em{
-    color: red;
-    cursor: pointer;
+
+
+
+
+@media (min-width:500px){
+    
+    body {
+        background: hsl(0, 100%, 74%) url('images/bg-intro-desktop.png') no-repeat;
+    }
+    .body{
+        height: 95vh;
+        max-width: 900px  ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .left, .right {
+        width: 42vw;
+    }
+    .right{
+        margin-left: 3vw;
+    }
+    h1 {
+        font-size: 2.6em;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+    p{
+        line-height: 24px;
+    }
+    .try{
+        height: 3em;
+        text-align: center;
+        background-color: hsl(248, 32%, 49%);
+        border-radius: 10px;
+        box-shadow:1px 5px 3px hsla(248, 32%, 49%, 0.5)  ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .try:hover {
+        background-color: hsla(248, 31%, 50%, 0.863);
+    }
+    .form{
+        padding:2em;
+        background-color: white;
+        border-radius: 10px;
+        color:black;
+        display: flex;
+        flex-direction: column;
+        box-shadow:1px 5px 3px rgba(0, 0, 0, 0.185);
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input{
+        font-size: 1.2em;
+        height: 2.5em;
+        padding: 1em;
+        border: solid 2px rgba(0, 0, 0, 0.089);
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    input:hover{
+        border: solid 2px rgba(0, 0, 0, 0.219);
+    }
+    input:focus {
+        outline: none;
+        border: solid 2px rgba(0, 0, 0, 0.267);
+    }
+    button {
+        font-size: 1.2em;
+        height:2.5em;
+        border: solid 2px hsl(154, 57%, 45%);
+        border-radius: 10px;
+        color: white;
+        background-color: hsl(154, 59%, 51%);
+        cursor: pointer;
+    }
+    button:hover {
+        border: solid 2px hsl(154, 80%, 27%);
+        background-color: hsla(154, 80%, 27%, 0.062);
+        color: hsl(154, 80%, 27%)
+    }
+    .terms{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 0.59em;
+    }
+    .terms span em{
+        color: red;
+        cursor: pointer;
+    }
+    .attribution{
+        font-size: 1em;
+        margin: 5em 0px;
+    }
 }
